@@ -8,6 +8,7 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         final CounterClass time = new CounterClass(count(), 1000);
         time.start();
-        //System.out.println(count());
+
     }
 
 
@@ -54,17 +55,14 @@ public class MainActivity extends AppCompatActivity {
 
 
             long millis = millisUntilFinished;
-            String hms = String.format("%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millis),
+            String hms = String.format(Locale.CANADA, "%02d:%02d:%02d:%02d", TimeUnit.MILLISECONDS.toDays(millis), TimeUnit.MILLISECONDS.toHours(millis)
+                            - TimeUnit.DAYS.toHours(TimeUnit.MILLISECONDS.toDays(millis)),
                     TimeUnit.MILLISECONDS.toMinutes(millis)
                             - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)),
                     TimeUnit.MILLISECONDS.toSeconds(millis) -
                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
 
-            /*int seconds = (int) (count() / 1000) % 60 ;
-            int minutes = (int) ((count() / (1000*60)) % 60);
-            int hours   = (int) ((count() / (1000*60*60)) % 24);
 
-            String hms = String.format("%02d:%02d:%02d", hours, hours-minutes, seconds);*/
 
             System.out.println(hms);
             time.setText(hms);
