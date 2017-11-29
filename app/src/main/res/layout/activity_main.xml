@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:fontFamily="sans-serif-light"
-        android:text="@string/clock"
-        android:textColor="@color/tempClock"
+        android:text="dupa"
+        android:textColor="@color/clock"
         android:textSize="@dimen/textSize"
         android:textStyle="bold"
 

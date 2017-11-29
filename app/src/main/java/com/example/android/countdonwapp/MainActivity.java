@@ -12,8 +12,18 @@ import java.util.concurrent.TimeUnit;
 
 
 public class MainActivity extends AppCompatActivity {
+    long now = System.currentTimeMillis();
 
     TextView time;
+
+    public long count() {
+
+        long setup = 1514134800000L;
+
+        long zeit = setup - now;
+
+        return zeit;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         time = (TextView) findViewById(R.id.text);
 
-        time.setText("00:03:00");
+        time.setText("");
 
-        final CounterClass time = new CounterClass(25000, 1000);
+        final CounterClass time = new CounterClass(count(), 1000);
         time.start();
+        //System.out.println(count());
     }
+
 
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     @SuppressLint("NewApi")
@@ -40,12 +52,20 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onTick(long millisUntilFinished) {
 
+
             long millis = millisUntilFinished;
-            String hms = String.format("%02d:%02d:%02d", TimeUnit.MICROSECONDS.toHours(millis),
+            String hms = String.format("%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millis),
                     TimeUnit.MILLISECONDS.toMinutes(millis)
                             - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)),
                     TimeUnit.MILLISECONDS.toSeconds(millis) -
                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
+
+            /*int seconds = (int) (count() / 1000) % 60 ;
+            int minutes = (int) ((count() / (1000*60)) % 60);
+            int hours   = (int) ((count() / (1000*60*60)) % 24);
+
+            String hms = String.format("%02d:%02d:%02d", hours, hours-minutes, seconds);*/
+
             System.out.println(hms);
             time.setText(hms);
         }
@@ -56,5 +76,7 @@ public class MainActivity extends AppCompatActivity {
             time.setText("God help");
 
         }
+
+
     }
 }
