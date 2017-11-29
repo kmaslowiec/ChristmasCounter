@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-
+/*If I put @ it direct the code to sb else*/
 public class MainActivity extends AppCompatActivity {
     long now = System.currentTimeMillis();
 
