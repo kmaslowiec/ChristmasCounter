@@ -8,18 +8,81 @@
     android:paddingTop="16dp"
     tools:context=".MainActivity">
 
+    <!--this creates day key-->
     <TextView
+
+
+        android:id="@+id/day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/text"
-        android:layout_centerInParent="true"
+
+        android:layout_above="@+id/text"
+        android:layout_centerInParent="false"
+        android:layout_toLeftOf="@+id/text"
+        android:layout_toStartOf="@+id/text"
         android:fontFamily="sans-serif-light"
-        android:text="@string/key"
+        android:text="@string/day"
         android:textColor="@color/clock"
         android:textSize="@dimen/textSize"
-        android:textStyle="bold"
+        android:textStyle="bold" />
 
-        />
+    <!--this creates hour key-->
+    <TextView
+
+        android:id="@+id/hr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_above="@+id/text"
+        android:layout_alignLeft="@+id/text"
+        android:layout_alignStart="@+id/text"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginStart="14dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/hr"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold" />
+
+    <!--this creates min key-->
+    <TextView
+        android:id="@+id/min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/hr"
+        android:layout_alignBottom="@+id/hr"
+        android:layout_alignEnd="@+id/text"
+        android:layout_alignRight="@+id/text"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/min"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold" />
+
+    <!--this creates sec key-->
+    <TextView
+
+        android:id="@+id/sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignBaseline="@+id/min"
+        android:layout_alignBottom="@+id/min"
+        android:layout_toEndOf="@+id/min"
+        android:layout_toRightOf="@+id/min"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/s"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/text"

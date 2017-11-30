@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Christmas is coming</string>
     <string name="clock">02 02 02 02</string>
-    <string name="key">day hr min sec</string>
+    <string name="day">day</string>
+    <string name="hr">hour</string>
+    <string name="min">min</string>
+    <string name="s">sec</string>
 
 
 </resources>

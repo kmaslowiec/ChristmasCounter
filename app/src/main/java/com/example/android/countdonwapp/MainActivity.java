@@ -66,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
 
             long millis = millisUntilFinished;
+
+
             String hms = String.format(Locale.CANADA, "%02d:%02d:%02d:%02d", TimeUnit.MILLISECONDS.toDays(millis), TimeUnit.MILLISECONDS.toHours(millis)
                             - TimeUnit.DAYS.toHours(TimeUnit.MILLISECONDS.toDays(millis)),
                     TimeUnit.MILLISECONDS.toMinutes(millis)
