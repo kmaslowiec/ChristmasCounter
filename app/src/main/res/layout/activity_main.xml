@@ -9,12 +9,25 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/key"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:fontFamily="sans-serif-light"
-        android:text="dupa"
+        android:text="@string/clock"
         android:textColor="@color/clock"
         android:textSize="@dimen/textSize"
         android:textStyle="bold"

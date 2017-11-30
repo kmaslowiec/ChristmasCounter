@@ -11,11 +11,21 @@ import android.widget.TextView;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-/*If I put @ it direct the code to sb else*/
+/**
+ * @author Konrad Maslowiec aka Thorn
+ * @since Nov 22, 2017
+ * <p>
+ * The logic for downcounter. My first Android App. Google Udacity Android Basic Project I
+ */
 public class MainActivity extends AppCompatActivity {
     long now = System.currentTimeMillis();
 
     TextView time;
+
+    /**
+     *
+     * @return time setup in future minus current time
+     */
 
     public long count() {
 
@@ -36,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         time.setText("");
 
         final CounterClass time = new CounterClass(count(), 1000);
+
         time.start();
 
     }
@@ -71,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onFinish() {
 
-            time.setText("God help");
+            time.setText("Merry Christmas");
 
         }
 

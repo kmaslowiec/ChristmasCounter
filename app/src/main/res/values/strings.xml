@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">CrossFit</string>
-    <string name="clock">test</string>
+    <string name="clock">02    02     02     02</string>
+    <string name="key">day hr min sec</string>
 
 
 </resources>
