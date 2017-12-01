@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:\Konrad\JAVA\AndroidProjects\CountDonwApp\ChristmasCounter.iml" filepath="D:\Konrad\JAVA\AndroidProjects\CountDonwApp\ChristmasCounter.iml" />
       <module fileurl="file://$PROJECT_DIR$/CountDonwApp.iml" filepath="$PROJECT_DIR$/CountDonwApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

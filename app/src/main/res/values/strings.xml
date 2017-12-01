@@ -6,5 +6,9 @@
     <string name="min">min</string>
     <string name="s">sec</string>
 
+    <string name="ClockD">oD</string>
+    <string name="ClockH">oH</string>
+    <string name="ClockM">oM</string>
+    <string name="ClockS">oS</string>
 
 </resources>

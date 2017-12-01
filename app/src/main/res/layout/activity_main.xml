@@ -97,6 +97,65 @@
 
 
         />
+    <!-- Shows timer that counts day until Christmas -->
+    <TextView
+        android:id="@+id/clockD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/day"
+        android:layout_alignStart="@id/day"
+        android:layout_below="@+id/day"
+        android:layout_marginTop="7dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/ClockD"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold" />
 
+    <!-- Shows timer that counts hours -->
+    <TextView
+        android:id="@+id/clockH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/hr"
+        android:layout_alignStart="@id/hr"
+        android:layout_below="@+id/day"
+        android:layout_marginTop="7dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/ClockH"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold" />
+
+    <!-- Shows timer that counts minutes -->
+    <TextView
+        android:id="@+id/clockM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/min"
+        android:layout_alignStart="@id/min"
+        android:layout_below="@+id/day"
+        android:layout_marginTop="7dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/ClockM"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold" />
+
+    <!-- Shows timer that counts seconds -->
+    <TextView
+        android:id="@+id/clockS"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/sec"
+        android:layout_alignStart="@id/sec"
+        android:layout_below="@+id/day"
+        android:layout_marginTop="7dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/ClockM"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold" />
 
 </RelativeLayout>
