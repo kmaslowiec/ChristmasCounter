@@ -3,5 +3,7 @@
 
     <dimen name="textSize">25sp</dimen>
 
+    <dimen name="key1">5dp</dimen>
+    <dimen name="key2">4dp</dimen>
 
 </resources>
