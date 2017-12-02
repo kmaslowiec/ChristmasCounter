@@ -8,136 +8,95 @@
     android:paddingTop="16dp"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/inner"
+    <!--this creates day key-->
+    <TextView
+
+
+        android:id="@+id/day"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
 
-        <!--this creates day key-->
-        <TextView
-            android:id="@+id/day"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:above="@id/clockD"
+        android:layout_above="@+id/text"
+        android:layout_centerInParent="false"
+        android:layout_toLeftOf="@+id/text"
+        android:layout_toStartOf="@+id/text"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/day"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold" />
 
-            android:fontFamily="sans-serif-light"
-            android:text="@string/day"
-            android:textColor="@color/clock"
-            android:textSize="@dimen/textSize"
-            android:textStyle="bold"
-            android:toLeftOf="@id/hr" />
+    <!--this creates hour key-->
+    <TextView
 
-        <!-- Shows timer that counts days until Christmas -->
-        <TextView
-            android:id="@+id/clockD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/day"
-            android:layout_toLeftOf="@+id/hr"
-            android:layout_toStartOf="@+id/hr"
-            android:below="@id/dat"
-            android:fontFamily="sans-serif-light"
-            android:text="@string/ClockD"
-            android:textColor="@color/clock"
-            android:textSize="@dimen/textSize"
-            android:textStyle="bold" />
-
-        <!--this creates hour key-->
-        <TextView
-
-            android:id="@+id/hr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/day"
-            android:fontFamily="sans-serif-light"
-            android:text="@string/hr"
-            android:textColor="@color/clock"
-            android:textSize="@dimen/textSize"
-            android:textStyle="bold" />
-
-        <!-- Shows timer that counts hours -->
-        <TextView
-            android:id="@+id/clockH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/hr"
-            android:layout_toRightOf="@id/clockD"
-            android:fontFamily="sans-serif-light"
-            android:text="@string/ClockH"
-            android:textColor="@color/clock"
-            android:textSize="@dimen/textSize"
-            android:textStyle="bold" />
-
-        <!--this creates min key-->
-        <TextView
-            android:id="@+id/min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/clockH"
-            android:layout_toRightOf="@id/hr"
-            android:fontFamily="sans-serif-light"
-            android:text="@string/min"
-            android:textColor="@color/clock"
-            android:textSize="@dimen/textSize"
-            android:textStyle="bold" />
-
-        <!-- Shows timer that counts minutes -->
-        <TextView
-            android:id="@+id/clockM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/min"
-            android:layout_toRightOf="@id/clockH"
-            android:fontFamily="sans-serif-light"
-            android:text="@string/ClockM"
-            android:textColor="@color/clock"
-            android:textSize="@dimen/textSize"
-            android:textStyle="bold" />
-
-        <!--this creates min key-->
-        <TextView
-            android:id="@+id/sec"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/min"
-
-            android:fontFamily="sans-serif-light"
-            android:text="@string/s"
-            android:textColor="@color/clock"
-            android:textSize="@dimen/textSize"
-            android:textStyle="bold" />
-
-        <!-- Shows timer that counts seconds -->
-        <TextView
-            android:id="@+id/clockS"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/sec"
-            android:layout_toRightOf="@id/clockM"
-
-            android:fontFamily="sans-serif-light"
-            android:text="@string/ClockS"
-            android:textColor="@color/clock"
-            android:textSize="@dimen/textSize"
-            android:textStyle="bold" />
-
-    </RelativeLayout>
+        android:id="@+id/hr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
 
-    <!--  <TextView
-          android:id="@+id/text"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_centerInParent="true"
-          android:fontFamily="sans-serif-light"
-          android:text="@string/clock"
-          android:textColor="@color/clock"
-          android:textSize="@dimen/textSize"
-          android:textStyle="bold"
+        android:layout_above="@+id/text"
+        android:layout_alignLeft="@+id/text"
+        android:layout_alignStart="@+id/text"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginStart="14dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/hr"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold" />
+
+    <!--this creates min key-->
+    <TextView
+        android:id="@+id/min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/hr"
+        android:layout_alignBottom="@+id/hr"
+        android:layout_alignEnd="@+id/text"
+        android:layout_alignRight="@+id/text"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/min"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold" />
+
+    <!--this creates sec key-->
+    <TextView
+
+        android:id="@+id/sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
 
-          />-->
+        android:layout_alignBaseline="@+id/min"
+        android:layout_alignBottom="@+id/min"
+        android:layout_toEndOf="@+id/min"
+        android:layout_toRightOf="@+id/min"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/s"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/clock"
+        android:textColor="@color/clock"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold"
+
+
+        />
 
 
 </RelativeLayout>
