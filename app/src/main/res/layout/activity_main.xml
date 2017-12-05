@@ -2,11 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="15dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/back"
+
+
+        />
+
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -15,7 +21,7 @@
         android:layout_centerVertical="true"
 
         >
-        <!--this creates day key-->
+        <!--this creates time to christmas key-->
         <TextView
 
 
@@ -26,7 +32,7 @@
             android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif-light"
             android:text="@string/day"
-            android:textColor="@color/clock"
+            android:textColor="@color/top"
             android:textSize="@dimen/textSize"
             android:textStyle="bold" />
 
@@ -40,12 +46,26 @@
             android:layout_centerInParent="false"
             android:fontFamily="sans-serif-light"
             android:text="@string/clock"
-            android:textColor="@color/clock"
+            android:textColor="@color/down"
             android:textSize="@dimen/textSize"
             android:textStyle="bold"
 
 
             />
+
+
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/key1"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/sign"
+        android:textColor="@color/top"
+
+        />
 
 </RelativeLayout>
