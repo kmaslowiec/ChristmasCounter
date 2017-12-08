@@ -2,10 +2,11 @@ package com.example.android.countdonwapp;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v7.app.AppCompatActivity;
+import android.view.Window;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -17,7 +18,7 @@ import java.util.concurrent.TimeUnit;
  * <p>
  * The logic for downcounter. My first Android App. Google Udacity Android Basic Project I
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     long now = System.currentTimeMillis();
 
     TextView time;
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         setContentView(R.layout.activity_main);
 
         time = (TextView) findViewById(R.id.text);
